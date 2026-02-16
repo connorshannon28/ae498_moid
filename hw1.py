@@ -117,7 +117,7 @@ moid_au = moid / 1.495978707e8  # km -> AU
 print("Grid MOID (AU):", moid_au)
 print("True anomalies at MOID (radians):", f1_min, f2_min)
 
-# --- Optimizer bounds adjusted for orbit type ---
+# Optimizer bounds adjusted for orbit type
 def get_bounds(e1, e2):
     if e1 < 1:
         f1_bounds = (0, 2*np.pi)
@@ -157,3 +157,4 @@ moid = np.sqrt(res.fun) / 1.495978707e8
 
 print("Refined MOID (AU):", moid)
 print("True anomalies at refined MOID (radians):", f1_opt, f2_opt)
+
