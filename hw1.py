@@ -98,7 +98,7 @@ orbit2 = ATL
 f_vals1 = generate_true_anomalies(orbit1[1], num_points=500)
 f_vals2 = generate_true_anomalies(orbit2[1], num_points=500)
 
-# --- Grid search ---
+# Grid search
 min_dist = 1e20
 f1_min = 0
 f2_min = 0
@@ -157,4 +157,3 @@ moid = np.sqrt(res.fun) / 1.495978707e8
 
 print("Refined MOID (AU):", moid)
 print("True anomalies at refined MOID (radians):", f1_opt, f2_opt)
-
